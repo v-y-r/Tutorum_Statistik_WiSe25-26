@@ -101,8 +101,8 @@ power.t.test(power = 0.8, delta = 0 - mean(log(size_daphnia)), sd = sd(log(size_
 10^(t.test(log10(size_daphnia), mu = 0)$estimate)
 10^(t.test(log10(size_daphnia), mu = 0)$conf.int)
 
-exp(t.test(log10(size_daphnia), mu = 0)$estimate)
-exp(t.test(log10(size_daphnia), mu = 0)$conf.int)
+exp(t.test(log(size_daphnia), mu = 0)$estimate)
+exp(t.test(log(size_daphnia), mu = 0)$conf.int)
 
 
 #Aufgabe 7
@@ -132,7 +132,7 @@ n2 <- 25
 (p2 <- 2 * (1 - pt(t2, n2)))
 
 #d)
-power.t.test(sd = 12, sig.level = 0.05, power = 0.9, delta= 1, 
+power.t.test(sd = 15, sig.level = 0.05, power = 0.9, delta= 12, 
               alternative='two.sided', type='one.sample')
 
 
